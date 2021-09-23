@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+body				{margin: auto;}
+#container			{ width : 920px; margin: auto;}
+#header				{ background-color:orange; height:100px; }
+#content			{ height:490px; padding-top: 70px; background-color:#F5F5F5;}
+#Manager_SideInfo	{ text-align: center; background-color: black; width: 920px; position: fixed; overflow: hidden; height:50px;}
+#btn_back			{ position: fixed; left: 20px; top: 10px; width: 40px; height: 40px; border: 0px; border-radius: 15px;}
+
+</style>
+<script type ="text/javascript" src="../../../js/jqurey/jquery-3.6.0.js"></script>
+
+<title>관리자</title>
+</head>
+	<body>
+		<input type= "image" id = "btn_back" src="../../../image/img/backward.png" onclick="location.href='../../../index.html'"> 
+		<div id="container">
+			<div id="header"><iframe name = "User_Header" src="./MangerHeader.html" width="100%" height="100%" frameborder="0">header</iframe></div>
+			<div id="Manager_SideInfo"><iframe name = "Manager_SideInfo" src="ManagerSideInfo.html" width="100%" height="100%" frameborder="0"  scrolling = no>SideInfo</iframe></div>
+			<div id="content"><iframe name = "Manager_Content" src=".././Content/Month.html" width="100%" height="100%" frameborder="0">Content</iframe></div>
+		</div>
+	</body>
+</html>

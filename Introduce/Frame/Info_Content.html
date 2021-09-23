@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>내용</title>
+    <style>
+     #ResumMenu{
+        position: fixed;
+        text-align: center;
+        background-color:gray;
+        margin: auto;
+        width: 100%;
+        height: 50px;
+    }
+    #ResemMenu > #Resume{
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    #Resume li:after {
+		content: ' |';
+	}
+	#Resume li:last-child:after { /*마지막은 추가 안함*/
+		content: '';
+	}
+    #Resume{
+        list-style-type: none;
+    }
+    #Resume > li{
+        display: inline-block;
+    }
+    #Resume > li > a {
+        text-decoration: none;
+        color:black;
+        opacity: 0.5;
+    }
+    #Resume > li > #a_Home{
+        color:black;
+        opacity: 0.5;
+    }
+
+    hr {
+        border: 0;
+        height: 5px;
+        background: darkgray;
+    }
+
+    #Content{
+        display: none;
+        background-color:#F5F5F5;
+    }
+    #Content #Myself #myself_info{
+        background-color: white;
+    }
+
+    table{
+        width: 100%;
+    }
+    table > thead{
+        height: 30px;
+        font-size: 25px;
+    }
+    .CertificateT > tbody > tr:first-of-type{
+        background-color: white;
+    }
+    .illust_img{
+        width: 200px;
+        height: 150px;
+    }
+    #hobby{
+        display: none;
+        text-align: center;
+    }
+    #hobby_p, #p_info2{
+        display: inline-block;
+    }
+    #p_info1, #p_info2{
+        width: 300px;
+        height: 400px;
+    }
+    #p_info1{
+        margin-left: 20%;
+        position: absolute;
+        visibility: hidden;
+        background-color: lightgrey;
+    }
+    #p_info2{
+        margin-left: 70px;
+        position: absolute;
+        /* left: 60%; */
+        visibility: hidden;
+        background-color: lightgrey;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="../js/Content.js"></script>
+</head>
+<body>
+    <div id = "Menu">
+        <div id = "ResumMenu">
+            <ul id = "Resume">
+                <li><a id = "a_Home" name = "a_check" href = "#Myself" onclick="changes('a_Home');">홈</a></li>
+                <li><a id = "a_Myself" name = "a_check" href = "#Myself" onclick="changes('a_Myself');">자기소개</a></li>
+                <li><a id = "a_Education" name = "a_check" href = "#Education" onclick="changes('a_Education');">학력사항</a></li>
+                <li><a id = "a_Career" name = "a_check" href = "#Career" onclick="changes('a_Career');">경력사항</a></li>
+                <li><a id = "a_Certificate" name = "a_check" href = "#Certificate" onclick="changes('a_Certificate');">보유 자격증</a></li>
+                <li><a id = "a_hobby" name = "a_check" href = "#hobby" onclick="changes('a_hobby');">관심사</a></li>
+            </ul>
+        </div>
+        <div id = "Content">
+            <div id = "Myself" class = "Content">
+                <br><br>
+                <h1>자기소개</h1>
+                <p id = "myself_info">
+                    안녕하세요.👀<br>
+                    저는 풀스택 개발자💻가 되고 싶은 김정현입니다.🙋‍♀️<br>
+                    기능을 구현할 때 발생하는 오류를 해결했을 때 희열감✨이 좋아서 개발자의 길로 계속 걸어가고 있습니다. <br>
+                    언젠가 번뜩이는 아이디어💡가 떠올랐을 때 프로그램을 기획부터 개발까지 혼자 만드는 것이 꿈입니다. <br>
+                    기본 개념들을 대학교 수업으로 세기고 자격증 취득을 통해 다지고,<br>
+                    KH정보교육원 수업을 통해 실무 중심 교육📝을 들었습니다.<br>
+                    아직 배워야 할 것이 산더미지만 차근차근 배우겠습니다.<br>
+                    잘 부탁드립니다.🙏
+                </p>
+                <hr>
+            </div>
+            <div id = "Education" class = "Content">
+                <br><br>
+                <h1>학력</h1>
+                <table class = "EducationT">
+                    <thead>
+                        <tr style="background-color:white"><td colspan="2"><strong>최종 학력 : 대학교(4년) 졸업</strong></td></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>한국성서대학교</strong></td>
+                            <td>서울</td>
+                        </tr>
+                        <tr>
+                            <td>2017.03 ~ 2021.02</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>컴퓨터소프트웨어학과</td>
+                            <td>3.73/4.3</td>    
+                        </tr>
+                        <tr>
+                            <td><strong>혜원여자고등학교</strong></td>
+                            <td>서울</td>
+                        </tr>
+                        <tr>
+                            <td>2014.03 ~ 2017.02</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>이과계열</td> 
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+            </div>
+            <div id = "Career" class = "Content">
+                <br><br>
+                <h1>경력</h1>
+                <table class = "CareerT">
+                    <thead>
+                        <tr style="background-color:white"><td colspan="2"><strong>총 경력 : 7개월</strong></td></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>진학사</strong></td>
+                            <td>서울</td>
+                        </tr>
+                        <tr>
+                            <td>2020.07 ~ 2021.01</td>
+                            <td>개발부 / 인턴/수습(팀원)</td>
+                        </tr>
+                        <tr>
+                            <td>담당업무</td>
+                            <td>유지보수, 운영/현장지원, QA, SQL</td>    
+                        </tr>
+                        <tr>
+                            <td>퇴사사유</td>
+                            <td>계약만료</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+            </div>
+            <div id = "Certificate" class = "Content">
+                <br><br>
+                <h1>보유 자격증</h1>
+                <table class = "CertificateT">
+                    <tbody>
+                        <tr><td><strong>SQL개발자(SQLD)</strong></td></tr>
+                        <tr><td>2021.04(최종합격)</td></tr>
+                        <tr><td>발행처 : 한국데이터베이스진흥센터</td></tr>
+                    </tbody>
+                    <tbody>
+                        <tr><td><strong>정보처리기사</strong></td></tr>
+                        <tr><td>2020.12(최종합격)</td></tr>
+                        <tr><td>발행처 : 한국산업인력공단</td></tr>
+                    </tbody>
+                    <tbody>
+                        <tr><td><strong>2종보통운전면허</strong></td></tr>
+                        <tr><td>2020.03(최종합격)</td></tr>
+                        <tr><td>발행처 : 경찰청(운전명허시험관리단</td></tr>
+                    </tbody>
+                    <tbody>
+                        <tr><td><strong>ISTQB Foundation level</strong></td></tr>
+                        <tr><td>2020.02(최종합격)</td></tr>
+                        <tr><td>발행처 : International Software Testing</td></tr>
+                    </tbody>
+                    <tbody>
+                        <tr><td><strong>DIAT 스프레드시트(고급)</strong></td></tr>
+                        <tr><td>2017.06(최종합격)</td></tr>
+                        <tr><td>발행처 : 한국정보통신인력개발센터</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id = "hobby" class = "Content" style="background-color: white;">
+                <br><br>
+                <div id = "move_ogu" style="background-color: white; text-align: center;">
+                    <img id ="ogu" src= "../img/ogu/ogu2.gif" width="70px" height="70px">
+                    <h1 style="display: inline-block; vertical-align: middle; margin-top: -50px;">관심사</h1>
+                    <img id ="ogu" src= "../img/ogu/ogu2.gif" width="70px" height="70px" style="transform:rotate(0deg); -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); position:relative; overflow: hidden; padding-top: 20px;">
+                </div>
+                <div id = "p_info1">
+                </div>
+                <div id = "hobby_p">
+                    <p id = "picture_p">1. Picture</p>
+                    <p id = "Maple_p">2. Maple</p>
+                    <p id = "Ogu_p">3. Ogu</p>
+                </div>
+                <div id = "p_info2">
+            </div>
+        </div>
+    </div>
+    <script>
+                
+        $("#picture_p").hover(function(){
+            $("#p_info1").children().remove();
+            const tag= `<p><b>사진찍기📷</b><br>
+                            <img src = "../img/illust/illust1_1.jpg" width="75px" height=65px">
+                            <img src = "../img/illust/illust2_2.jpg" width="75px" height="65px">
+                            <br><b>마음에 드는 사진 일러스트로 그리기🎨<b><br>
+                            <img src = "../img/illust/illust1.png" width="75px" height="65px">
+                            <img src = "../img/illust/illust2.jpg" width="75px" height="65px"><br>
+                            <img src = "../img/illust/illust3.jpg"width="160px" height="160px">
+                        </p>`;
+            $("#p_info1").append(tag);
+            $("#p_info1").css("visibility","visible");
+        },function(){
+            $("#p_info1").children().remove();
+            $("#p_info1").css("visibility","hidden");
+        });
+
+        $("#Maple_p").hover(function(){
+            $("#p_info2").children().remove();
+            const tag= `<p><b>요즘 즐겨하는 게임🎮</b><br>
+                            <img src = "../img/maple/maple1.jpg" width="150px" height=130px">
+                            <br><b>뽑기로 얻은 결과물👀<b><br>
+                            <img src = "../img/maple/maple2.jpg" width="150px" height="150px"><br>
+                            DEX DEX DEX 3combo✨
+                        </p>`;
+            $("#p_info2").append(tag);
+            $("#p_info2").css("visibility","visible");
+        },function(){
+            $("#p_info2").children().remove();
+            $("#p_info2").css("visibility","hidden");
+        });
+        
+        $("#Ogu_p").hover(function(){
+            $("#p_info1").children().remove();
+            const tag= `<p style = "background-color:white"><b>좋아하는 캐릭터</b><br>
+                            <img src = "../img/ogu/ogu1.gif" width="120px" height=120px">
+                            <img src = "../img/ogu/ogu3.gif" width="120px" height="120px"><br>
+                            <img src = "../img/ogu/ogu_p1.jpg" width="120px" height=120px">
+                            <img src = "../img/ogu/ogu_p2.jpg" width="120px" height="120px"><br>  
+                        </p>`;
+            $("#p_info2").append(tag);
+            $("#p_info2").css("visibility","visible");
+            $("#p_info2").css("background-color",'white')
+        },function(){
+            $("#p_info2").children().remove();
+            $("#p_info2").css("visibility","hidden");
+        });
+    </script>
+</body>
+</html>
